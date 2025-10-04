@@ -3,7 +3,7 @@
   flex-direction: row;      
   align-items: center;      
   justify-content: space-between;
-  margin: 100px 10%;        
+  margin: 10px 10%;        
   gap: 50px;
   position: relative;
   z-index: 1;
@@ -115,3 +115,35 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  .title {
+    font-size: 28px;
+    margin: 40px 0 15px 0;
+    text-align: center; 
+  }
+
+  .desc {
+    font-size: 16px;
+    text-align: center; 
+    margin-bottom: 20px;
+  }
+
+  .downloadBtn {
+    margin: 0 auto; 
+    display: inline-block;
+  }
+
+  .profileImgWrapper {
+    margin-top: 10px;
+    max-width: 200px; 
+  }
+}
+
+
+

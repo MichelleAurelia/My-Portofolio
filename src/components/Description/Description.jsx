@@ -1,7 +1,9 @@
 import styles from "./Description.module.css";
 import SplitText from "../Design/SplitText";
-import profilePic from '../../assets/profile1.jpg';
+import profilePic from '../../assets/profile2.jpg';
 import cvFile from '../../assets/CV.pdf';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const handleAnimationComplete = () => {
   console.log('Animation Complete');
@@ -24,7 +26,7 @@ export const Description = () => {
                 tag="h1"
                 onLetterAnimationComplete={handleAnimationComplete}
             />
-            <p className={styles.desc}>
+            <p className={styles.desc} data-aos="fade-up">
             Passionate about software development, currently studying Computer Science at Bina Nusantara 
             University.
             </p>

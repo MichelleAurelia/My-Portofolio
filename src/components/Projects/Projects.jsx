@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import SplitText from "../Design/SplitText";
 import styles from "./Projects.module.css";
 import projectPic1 from "../../assets/DiamondFigma.png";
@@ -6,6 +8,7 @@ import projectPic2 from "../../assets/EduFunFigma.png";
 import projectPic3 from "../../assets/DiamondCutHome.png";
 import projectPic4 from "../../assets/CulinariaFigma.png";
 import projectPic5 from "../../assets/CulinariaHome.png";
+import projectPic6 from "../../assets/PortofolioHome.png";
 import { GoArrowRight } from "react-icons/go";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -35,7 +38,7 @@ export const Projects = () => {
             />
             <div className={styles.container}>
                 <div className={styles.cardContainer}>
-                     <article className={styles.cardArticle}>
+                     <article className={styles.cardArticle} data-aos="fade-up">
                         <a className={styles.projectImgWrapper}>
                             <img
                                 className={styles.projectImg}
@@ -59,7 +62,7 @@ export const Projects = () => {
                         </div>
                     </article>
 
-                    <article className={styles.cardArticle}>
+                    <article className={styles.cardArticle} data-aos="fade-up">
                         <a className={styles.projectImgWrapper}>
                             <img
                                 className={styles.projectImg}
@@ -83,7 +86,7 @@ export const Projects = () => {
                         </div>
                     </article>
 
-                    <article className={styles.cardArticle}>
+                    <article className={styles.cardArticle} data-aos="fade-up">
                         <a className={styles.projectImgWrapper}>
                             <img
                                 className={styles.projectImg}
@@ -107,7 +110,7 @@ export const Projects = () => {
                         </div>
                     </article>
 
-                    <article className={styles.cardArticle}>
+                    <article className={styles.cardArticle} data-aos="fade-up">
                         <a className={styles.projectImgWrapper}>
                             <img
                                 className={styles.projectImg}
@@ -131,7 +134,7 @@ export const Projects = () => {
                         </div>
                     </article>
 
-                    <article className={styles.cardArticle}>
+                    <article className={styles.cardArticle} data-aos="fade-up">
                         <a className={styles.projectImgWrapper}>
                             <img
                                 className={styles.projectImg}
@@ -143,7 +146,31 @@ export const Projects = () => {
                             <h2 className={styles.cardTitle}>Culinaria</h2>
                             <span className={styles.cardDesc}>Responsive Front-End Prototype of a Recipe Book Website</span>
                             <a className={styles.cardBtn}
-                                href="https://www.figma.com/design/CnusVj9ADeMTd5OGuAP6bN/Culinaria?node-id=0-1&t=8OM0B7bJqPgHFT6z-1"
+                                href="https://github.com/MichelleAurelia/Culinaria"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onMouseEnter={() => setHoverCard(true)}
+                                onMouseLeave={() => setHoverCard(false)}
+                            >
+                                See here{" "}
+                                {hoverCard ? <GoArrowUpRight className={styles.icon} /> : <GoArrowRight />}
+                            </a>
+                        </div>
+                    </article>
+
+                    <article className={styles.cardArticle} data-aos="fade-up">
+                        <a className={styles.projectImgWrapper}>
+                            <img
+                                className={styles.projectImg}
+                                src={projectPic6}
+                                alt="Portofolio Web Pic"
+                            />
+                        </a>
+                        <div className={styles.cardData}>
+                            <h2 className={styles.cardTitle}>My Portofolio</h2>
+                            <span className={styles.cardDesc}>Responsive Front-End Prototype of my Portofolio Website</span>
+                            <a className={styles.cardBtn}
+                                href="https://michelleaurelia.vercel.app"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onMouseEnter={() => setHoverCard(true)}

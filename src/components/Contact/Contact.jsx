@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import SplitText from "../Design/SplitText";
 import styles from "./Contact.module.css";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
@@ -27,8 +29,8 @@ export const Contact = () => {
                 onLetterAnimationComplete={handleAnimationComplete}
             />
 
-            <h2 className={styles.heading}>Let's Connect With Me!</h2>
-            <p className={styles.text}>
+            <h2 className={styles.heading} data-aos="fade-left">Let's Connect With Me!</h2>
+            <p className={styles.text} data-aos="fade-right">
                 Feel free to reach out for collaborations, projects, or just to say hi :)
             </p>
 
@@ -53,7 +55,7 @@ export const Contact = () => {
                 </a>
             </div>
 
-            <p className={styles.credit}>Designed by Michelle Aurelia © 2025</p>
+            <p className={styles.credit}>Designed by Michelle Aurelia 2025</p>
         </section>
     );
 };
