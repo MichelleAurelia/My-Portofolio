@@ -94,7 +94,6 @@ export const About = () => {
             <h3>Languages</h3>
             <li>Indonesian</li>
             <li>English</li>
-            <li>Korean</li>
 
             <h3>Hard Skills</h3>
             <li>Leadership</li>
